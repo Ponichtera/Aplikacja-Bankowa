@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="554.0" prefWidth="614.0" spacing="20.0" style="-fx-background-color: #e4e4e4;" stylesheets="@../resources/stylesheet/languagee.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LanguageController">
+   <children>
+      <Pane prefHeight="56.0" prefWidth="594.0" style="-fx-background-color: #FFC107;">
+         <children>
+            <Label fx:id="header" layoutX="12.0" layoutY="11.0" prefHeight="29.0" prefWidth="518.0" text="Select prefered language" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="357.0" prefWidth="594.0">
+         <children>
+            <ImageView fitHeight="260.0" fitWidth="274.0" layoutX="113.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="160.0">
+               <image>
+                  <Image url="@../resources/images/056940c1a55fc9c251ffdb002b9a3583.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="106.0" layoutY="29.0" maxHeight="62.0" prefHeight="62.0">
+               <children>
+                  <AnchorPane fx:id="englishPane" layoutY="1.0" minHeight="62.0" onMouseClicked="#setLocaleEN" onMouseExited="#closePane" style="-fx-background-color: F57C00;" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="English" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding>
+                  </AnchorPane>
+                  <ImageView fx:id="englishButton" fitHeight="60.0" fitWidth="60.0" onMouseClicked="#setLocaleEN" onMouseEntered="#openPane" onMouseExited="#closePane" pickOnBounds="true" preserveRatio="true" styleClass="shadow" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <image>
+                        <Image url="@../resources/images/united-kingdom.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="321.0" layoutY="29.0" maxHeight="62.0" prefHeight="62.0">
+               <children>
+                  <AnchorPane layoutY="1.0" minHeight="62.0" onMouseClicked="#setLocalePL" onMouseExited="#closePane" style="-fx-background-color: F57C00;" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="Polski" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding>
+                  </AnchorPane>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#setLocalePL" onMouseEntered="#openPane" onMouseExited="#closePane" pickOnBounds="true" preserveRatio="true" styleClass="shadow" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <image>
+                        <Image url="@../resources/images/poland.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="368.0" layoutY="106.0" maxHeight="62.0" prefHeight="62.0">
+               <children>
+                  <AnchorPane layoutY="1.0" minHeight="62.0" onMouseClicked="#setLocaleFR" onMouseExited="#closePane" style="-fx-background-color: F57C00;" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="Français" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding>
+                  </AnchorPane>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#setLocaleFR" onMouseEntered="#openPane" onMouseExited="#closePane" pickOnBounds="true" preserveRatio="true" styleClass="shadow" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <image>
+                        <Image url="@../resources/images/france.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="45.0" layoutY="106.0" maxHeight="62.0" prefHeight="62.0">
+               <children>
+                  <AnchorPane layoutY="1.0" minHeight="62.0" onMouseClicked="#setLocaleRU" onMouseExited="#closePane" style="-fx-background-color: F57C00;" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="Pуский " AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding>
+                  </AnchorPane>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#setLocaleRU" onMouseEntered="#openPane" onMouseExited="#closePane" pickOnBounds="true" preserveRatio="true" styleClass="shadow" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <image>
+                        <Image url="@../resources/images/russia.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

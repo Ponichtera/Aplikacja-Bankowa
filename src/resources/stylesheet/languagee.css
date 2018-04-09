@@ -1,0 +1,4 @@
+.shadow {
+-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,
+1.5)
+}

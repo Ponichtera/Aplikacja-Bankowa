@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="680.0" style="-fx-background-color: transparent;" stylesheets="@../resources/stylesheet/dashboard.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane layoutX="348.0" layoutY="17.0" prefHeight="424.0" prefWidth="331.0" style="-fx-background-color: white;">
+         <children>
+            <VBox alignment="CENTER" layoutX="-5.0" layoutY="-3.0" prefHeight="424.0" prefWidth="331.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                     <children>
+                        <JFXTextField fx:id="loginField" labelFloat="true" promptText="Enter your login:" HBox.hgrow="ALWAYS" />
+                        <ImageView fx:id="wrongLogin" visible="false" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/Delete_52px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <JFXPasswordField fx:id="passwordField"  labelFloat="true" onAction="#loginAction" promptText="Enter password:" HBox.hgrow="ALWAYS" />
+                        <ImageView fx:id="wrongPassword" visible="false" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/Delete_52px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <JFXButton contentDisplay="TEXT_ONLY" onAction="#loginAction" style="-fx-background-color: #272262;" styleClass="JFXButton-rounded-login" text="Login" />
+               </children>
+               <padding>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="450.0" prefWidth="346.0" style="-fx-background-color: #272262;" stylesheets="@../resources/stylesheet/dashboard.css">
+         <styleClass>
+            <String fx:value="card-unpadded" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <ImageView layoutX="58.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/Przechwytywanie.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView layoutX="626.0" layoutY="17.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/exit.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

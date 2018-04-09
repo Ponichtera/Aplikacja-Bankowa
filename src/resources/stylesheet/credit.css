@@ -1,0 +1,36 @@
+
+{
+color2 : #AFB42B;
+color1 : #CDDC39;
+}
+
+
+/*
+    The tab bar
+*/
+
+.jfx-tab-pane .headers-region {
+    -fx-background-color: color1;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: color1;
+}
+.jfx-tab-pane .tab-selected-line {
+    -fx-stroke: #75bc1b;
+    -fx-stroke-width: 3pt;
+}
+
+/*
+    button
+ */
+.jfx-button {
+    -fx-background-color: color1;
+    -fx-text-fill: white;
+    -fx-font-size: 18px bold;
+}
+
+.jfx-slider-colored{
+    -jfx-default-thumb: color2;
+    -jfx-default-track: color1;
+}
+

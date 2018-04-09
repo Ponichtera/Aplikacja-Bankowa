@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" prefHeight="520.0" prefWidth="800.0" styleClass="transparent" stylesheets="@../resources/stylesheet/dashboard.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <BorderPane fx:id="rootBorder" prefHeight="600.0" prefWidth="800.0">
+         <center>
+            <StackPane fx:id="centerPane" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="anchorPane" prefHeight="554.0" prefWidth="633.0" style="-fx-background-color: #E4E4E4;" />
+               </children>
+            </StackPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="549.0" prefWidth="186.0" styleClass="transparent" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="550.0" prefWidth="30.0" style="-fx-background-color: #e4e4e4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <VBox layoutX="36.0" layoutY="48.0" prefHeight="549.0" prefWidth="186.0" spacing="10.0" styleClass="transparent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="13.0" layoutY="274.0" styleClass="Pane-rounded-transparent">
+                           <children>
+                              <AnchorPane fx:id="homePane" onMouseClicked="#loadDashBoard" onMouseExited="#closeAllButtons" prefHeight="200.0" prefWidth="200.0" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="homeButtonLabel" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="Home" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" onMouseClicked="#loadDashBoard" onMouseEntered="#openHome" prefHeight="158.0" prefWidth="201.0" style="-fx-background-color: #2196F3;" styleClass="JFXButton-rounded" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/Home_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </AnchorPane>
+                        <AnchorPane styleClass="Pane-rounded-transparent" VBox.vgrow="SOMETIMES">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <AnchorPane fx:id="depositPane" onMouseClicked="#loadDeposit" onMouseExited="#closeAllButtons" prefHeight="200.0" prefWidth="200.0" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="depositButtonLabel" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="Deposit" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" onMouseClicked="#loadDeposit" onMouseEntered="#openDeposit" prefHeight="158.0" prefWidth="201.0" style="-fx-background-color: #00BCD4;" styleClass="JFXButton-rounded" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/Deposit_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="23.0" layoutY="220.0" styleClass="Pane-rounded-transparent" VBox.vgrow="SOMETIMES">
+                           <children>
+                              <AnchorPane fx:id="withdrawPane" onMouseClicked="#loadWithdraw" onMouseExited="#closeAllButtons" prefHeight="200.0" prefWidth="200.0" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="withdrawButtonLabel" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="Withdraw" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" onMouseClicked="#loadWithdraw" onMouseEntered="#openWithdraw" prefHeight="158.0" prefWidth="201.0" style="-fx-background-color: #4CAF50;" styleClass="JFXButton-rounded" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/Withdrawal_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </AnchorPane>
+                        <AnchorPane layoutX="23.0" layoutY="293.0" styleClass="Pane-rounded-transparent">
+                           <children>
+                              <AnchorPane fx:id="creditPane" onMouseClicked="#loadCredit" onMouseExited="#closeAllButtons" prefHeight="200.0" prefWidth="200.0" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="creditButtonLabel" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="Credit" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" onMouseClicked="#loadCredit" onMouseEntered="#openCredit" prefHeight="158.0" prefWidth="201.0" style="-fx-background-color: #CDDC39;" styleClass="JFXButton-rounded" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/Credit_64px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="239.0" styleClass="Pane-rounded-transparent">
+                           <children>
+                              <AnchorPane fx:id="languagePane" onMouseClicked="#loadLanguage" onMouseExited="#closeAllButtons" prefHeight="200.0" prefWidth="200.0" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="languageButtonLabel" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="Language" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" onMouseClicked="#loadLanguage" onMouseEntered="#openLanguage" prefHeight="158.0" prefWidth="201.0" style="-fx-background-color: #FFC107;" styleClass="JFXButton-rounded" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/Globe_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </AnchorPane>
+                        <AnchorPane layoutX="13.0" layoutY="288.0" styleClass="Pane-rounded-transparent">
+                           <children>
+                              <AnchorPane fx:id="logoutPane" onMouseClicked="#logout" onMouseExited="#closeAllButtons" prefHeight="200.0" prefWidth="200.0" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="logoutButtonLabel" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="92.0" styleClass="mylabel" text="Logout" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" onMouseClicked="#logout" onMouseEntered="#openLogout" prefHeight="158.0" prefWidth="201.0" style="-fx-background-color: #FF5722;" styleClass="JFXButton-rounded" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/Logout_48px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="385.0" styleClass="Pane-rounded-transparent">
+                           <children>
+                              <AnchorPane fx:id="shutdownPane" onMouseClicked="#shutdown" onMouseExited="#closeAllButtons" prefHeight="200.0" prefWidth="200.0" styleClass="Pane-rounded" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="shutdownButtonLabel" contentDisplay="RIGHT" prefHeight="23.0" styleClass="mylabel" text="Shutdown" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" onMouseClicked="#shutdown" onMouseEntered="#openShutdown" prefHeight="158.0" prefWidth="201.0" style="-fx-background-color: #111111;" styleClass="JFXButton-rounded" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/images/Shutdown_52px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</StackPane>

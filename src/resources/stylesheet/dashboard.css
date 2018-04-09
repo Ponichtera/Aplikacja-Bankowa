@@ -1,0 +1,105 @@
+/*Card and its components*/
+{
+    color1: #1976D2;
+    color2: #2196F3;
+    yes:    #8BC34A;
+    no:     #FF5722;
+}
+.transparent {
+    -fx-background-color: transparent;
+}
+
+.card {
+    -fx-background-color: rgb(255.0, 255.0, 255.0);
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);
+    -fx-padding: 16 16 16 16;
+}
+.card-unpadded {
+    -fx-background-color: rgb(255.0, 255.0, 255.0);
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,
+    1.5);
+    -fx-padding: 10 10 10 10;
+}
+
+.card-title {
+    -fx-font-size: 20.0px;
+    -fx-padding: 5 0 5 0;
+}
+
+.card-title .text {
+    -fx-fill: -fx-text-title-color;
+}
+
+.card-subtitle {
+    -fx-font-size: 16.0px;
+    -fx-padding: 5 0 5 0;
+}
+
+.card-subtitle .text {
+    -fx-fill: -fx-text-subtitle-color;
+}
+
+
+.JFXButton-rounded {
+     -fx-max-height: 60.0;
+     -fx-pref-height: 60.0;
+     -fx-max-width: 60.0;
+     -fx-pref-width: 60.0;
+     -fx-background-color: color2;
+     -fx-background-radius: 30
+ }
+
+.JFXButton-rounded-dialog {
+    -fx-max-height: 45.0;
+    -fx-pref-height: 45.0;
+    -fx-max-width: 120.0;
+    -fx-pref-width: 120.0;
+    -fx-background-radius: 10;
+    -fx-text-fill: WHITE;
+}
+
+.JFXButton-rounded-login {
+    -fx-max-height: 30.0;
+    -fx-pref-height: 30.0;
+    -fx-max-width: 120.0;
+    -fx-pref-width: 120.0;
+    -fx-background-radius: 15;
+    -fx-text-fill: WHITE;
+}
+
+.no-button {
+    -fx-background-color: no;
+}
+.yes-button {
+    -fx-background-color: yes;
+}
+
+.Pane-rounded {
+    -fx-max-height: 62.0;
+    -fx-pref-height: 62.0;
+    -fx-background-color: #c3c3c3;
+    -fx-background-radius: 31
+}
+.Pane-rounded-transparent {
+     -fx-max-height: 62.0;
+     -fx-pref-height: 62.0;
+     -fx-background-radius: 31
+ }
+
+.mylabel {
+    -fx-content-display: RIGHT;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 20;
+    -fx-text-fill: WHITE;
+}
+.dialogText {
+    -fx-content-display: RIGHT;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 16;
+}
+.shadow {
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 255.0, 0.15), 6.0, 0.7, 0.0,
+    1.5)
+}
